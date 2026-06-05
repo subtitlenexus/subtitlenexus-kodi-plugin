@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings version="1">
+    <section id="service.subtitles.subtitlenexus">
+        <category id="account" label="30200">
+            <group id="1">
+                <setting id="api_key" type="string" label="30201">
+                    <level>0</level>
+                    <default></default>
+                    <constraints>
+                        <allowempty>true</allowempty>
+                    </constraints>
+                    <control type="edit" format="string">
+                        <heading>30201</heading>
+                    </control>
+                </setting>
+                <setting id="domain" type="string" label="30202">
+                    <level>2</level>
+                    <default>api.subtitlenexus.com</default>
+                    <constraints>
+                        <allowempty>true</allowempty>
+                    </constraints>
+                    <control type="edit" format="string">
+                        <heading>30202</heading>
+                    </control>
+                </setting>
+            </group>
+        </category>
+        <category id="generation" label="30210">
+            <group id="1">
+                <setting id="model" type="string" label="30211">
+                    <level>0</level>
+                    <default>lulu-2605</default>
+                    <constraints>
+                        <allowempty>true</allowempty>
+                    </constraints>
+                    <control type="edit" format="string">
+                        <heading>30211</heading>
+                    </control>
+                </setting>
+                <setting id="subtitle_language" type="string" label="30212">
+                    <level>0</level>
+                    <default>en</default>
+                    <constraints>
+                        <allowempty>true</allowempty>
+                    </constraints>
+                    <control type="edit" format="string">
+                        <heading>30212</heading>
+                    </control>
+                </setting>
+                <setting id="audio_language" type="string" label="30213">
+                    <level>0</level>
+                    <default>ja</default>
+                    <constraints>
+                        <allowempty>true</allowempty>
+                    </constraints>
+                    <control type="edit" format="string">
+                        <heading>30213</heading>
+                    </control>
+                </setting>
+                <setting id="visibility" type="string" label="30214">
+                    <level>1</level>
+                    <default>PUBLIC</default>
+                    <constraints>
+                        <options>
+                            <option label="PUBLIC">PUBLIC</option>
+                            <option label="UNLISTED">UNLISTED</option>
+                        </options>
+                    </constraints>
+                    <control type="list" format="string">
+                        <heading>30214</heading>
+                    </control>
+                </setting>
+            </group>
+        </category>
+        <category id="cache" label="30220">
+            <group id="1">
+                <setting id="ignore_community_subs" type="boolean" label="30221">
+                    <level>0</level>
+                    <default>false</default>
+                    <control type="toggle"/>
+                </setting>
+                <setting id="disable_subtitle_search" type="boolean" label="30222">
+                    <level>1</level>
+                    <default>false</default>
+                    <control type="toggle"/>
+                </setting>
+                <setting id="auto_purchase_past_daily_limit" type="boolean" label="30223">
+                    <level>1</level>
+                    <default>false</default>
+                    <control type="toggle"/>
+                </setting>
+            </group>
+        </category>
+        <category id="advanced" label="30230">
+            <group id="1">
+                <setting id="ffmpeg_path" type="string" label="30231">
+                    <level>2</level>
+                    <default></default>
+                    <constraints>
+                        <allowempty>true</allowempty>
+                    </constraints>
+                    <control type="edit" format="file">
+                        <heading>30231</heading>
+                    </control>
+                </setting>
+            </group>
+        </category>
+    </section>
+</settings>

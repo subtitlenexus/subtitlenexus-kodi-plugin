@@ -1,0 +1,10 @@
+v0.1.0 (2026-05-22)
+- Initial release.
+- Subtitle provider extension (xbmc.subtitle.module): cache lookup + on-demand
+  transcription from Kodi's built-in subtitle search dialog.
+- Context menu item on video list items (kodi.context.item).
+- Script entry point with action picker (xbmc.python.script).
+- Settings: API key, domain, model, languages, visibility, cache flags,
+  ffmpeg path.
+- Audio pipeline: ffmpeg extract -> S3 upload -> subtitle request -> poll ->
+  download SRT.

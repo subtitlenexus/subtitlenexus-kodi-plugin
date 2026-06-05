@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="service.subtitles.subtitlenexus"
+       name="Subtitle Nexus"
+       version="0.1.0"
+       provider-name="subtitlenexus">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
+    </requires>
+    
+    <extension point="xbmc.subtitle.module"
+               library="service.py"/>
+    
+    <extension point="xbmc.python.script"
+               library="default.py">
+        <provides>executable</provides>
+    </extension>
+    
+    <extension point="xbmc.python.module"
+               library="resources/lib"/>
+    
+    <extension point="kodi.context.item"
+               library="context.py">
+        <item>
+            <label>30100</label>
+            <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | !String.IsEmpty(ListItem.FileNameAndPath)</visible>
+        </item>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Generate AI subtitles via Subtitle Nexus</summary>
+        <description lang="en_GB">Subtitle Nexus generates AI subtitles for your local video files via subtitlenexus.com. The add-on checks the Nexus community cache first (free), and offers an on-demand transcription option when no cached subs exist. Useful for any non-English audio you want subtitled.</description>
+        <disclaimer lang="en_GB">Requires a Subtitle Nexus API key (free signup at subtitlenexus.com). Transcription consumes Nexus tokens or daily credits.</disclaimer>
+        <platform>all</platform>
+        <language>en</language>
+        <license>MIT</license>
+        <source>https://github.com/subtitlenexus/subtitlenexus-kodi-plugin</source>
+        <website>https://subtitlenexus.com</website>
+        <email>eng@subtitlenexus.com</email>
+        <news>
+v0.1.0 (2026-05-22)
+- Initial release. Subtitle provider, context menu, and script entry points.
+- Cache lookup via /v1/subtitle/search/ and on-demand transcription pipeline
+  (audio extract -> upload -> request -> poll -> download SRT).
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.vscode/
+.idea/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+*.zip
+
+addon_data/
+userdata/
